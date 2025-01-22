@@ -1,5 +1,8 @@
 package com.assignment.service;
 
-public interface PremiumUserService {
+import java.util.Optional;
+import com.assignment.entity.User;
 
+public interface PremiumUserService {
+    Optional<User> register(String name, String email, String password);
 }

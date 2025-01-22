@@ -13,12 +13,13 @@ public class PremiumUserServiceImpl implements UserService, PremiumUserService {
 
     @Override
     public Optional<User> register(String name, String email, String password) {
-       Map<String,User> users = Data.data;
+        Map<String, User> users = Data.data;
         Optional<User> user = Optional.ofNullable(users.get(email));
-        if(!user.isPresent()){
-            return Optional.of(new User(Long.toString(Data.userId++),name,email,password,UserType.PREMIUM));
+        if (!user.isPresent()) {
+            User newUser = new User(Long.toString(Data.userId++), name, email, password, UserType.PREMIUM);
+            users.put(email, newUser); // Add the user to the map
+            return Optional.of(newUser);
         }
         return Optional.empty();
     }
-
 }
