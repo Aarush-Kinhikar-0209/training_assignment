@@ -4,17 +4,11 @@ import com.assignment.constants.UserType;
 
 public class User{
     private String id;
-
     private String name;
-    
     private String email;
-    
     private String password;
-
     private UserType userType;
-    
     private List<Order> orders;
-    
     private List<Book> shoppingCart;
 
     public User(String id, String name, String email, String password, UserType userType){
@@ -80,5 +74,7 @@ public class User{
     public void setShoppingCart(List<Book> shoppingCart) {
         this.shoppingCart = shoppingCart;
     }
+
+
 
 }
