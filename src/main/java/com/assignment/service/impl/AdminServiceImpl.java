@@ -7,7 +7,6 @@ import com.assignment.constants.UserType;
 import com.assignment.data.Data;
 import com.assignment.entity.User;
 import com.assignment.service.AdminService;
-// import com.assignment.service.UserService;
 
 public class AdminServiceImpl implements AdminService {
 
